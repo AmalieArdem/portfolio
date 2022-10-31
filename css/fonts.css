@@ -1,0 +1,40 @@
+.css-selector {
+    font-family: url('style.css');
+    }
+
+@font-face {
+    font-family: 'inter';
+    src: url('/fonts/Inter-VariableFont_slnt\,wght.ttf') format('Inter-VariableFont_wght');
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'inter-italic';
+    src: url('/fonts/Inter-VariableFont_slnt\,wght.ttf') format('Inter-VariableFont_wght');
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'inter-bold';
+    src: url('/fonts/Inter-VariableFont_slnt\,wght.ttf') format('Inter-VariableFont_wght');
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('/fonts/Poppins-Regular.ttf') format('poppins-regular.ttf');
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'inter-bold';
+    src: url('/fonts/Poppins-Bold.ttf') format('poppins-regular.ttf');
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: bold;
+}
