@@ -279,11 +279,14 @@ img {
 
 
   .back img {
-    width: 1.2vh;
+    width: 2.2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
     height: auto;
     
     margin-left: 1vh;
     margin-right: -0.5vh;
+
     margin-top: 0.7vh;
   }
 
