@@ -46,6 +46,7 @@ nav {
 }
 
 .back img {
+  z-index: 11;
   width: 13px;
   height: auto;
   margin-right: 0.5vh;
