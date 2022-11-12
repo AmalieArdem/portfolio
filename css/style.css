@@ -13,7 +13,13 @@ a {
 
 main {
   white-space: nowrap; 
-  max-width: 1920px;
+
+ /* max-width: 1920px; */
+ display: flex;
+ 
+ align-items: center;
+ flex-direction: column;
+
   margin: auto;
   overflow-x: hidden; 
 
@@ -96,31 +102,22 @@ ul li:hover {
 h2 {
  white-space: normal;
 }
+h1 {
+ white-space: normal;
+}
 h3 {
   white-space: normal;
 }
+
+
 /* Index side */
-
-#index-main .project-wrapper:hover {
-  animation: hoversaturate 300ms;
-  animation-fill-mode: forwards;
-  cursor: pointer;
-}
-
-@keyframes hoversaturate {
-  0% {
-  }
-  100% {
-    filter: saturate(200%);
-    color: rgb(31, 31, 31);
-  }
-}
-
 
 .arrow img {
   width: 10vw;
+  max-width: 80px;
 }
 .arrow {
+  margin-top: -10vh;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -170,6 +167,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 1080px;
 }
 
 /*Bilder*/
@@ -361,7 +359,7 @@ img {
 
     padding-bottom: 30vh;
     background-image: url(../images/illustrasjonForside.svg);
-    background-size: 150vw auto;
+    background-size: 90vw auto;
     background-position: center bottom;
     background-repeat: no-repeat;
   }
@@ -514,14 +512,14 @@ img {
   /* t Overskrift containere */
 
   .h1-container h1 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-bottom: 8vh;
 
     max-width: 750px;
   }
 
   .h1-container h2 {
-    margin-top: 17vh;
+    margin-top: 10vh;
     margin-bottom: 8vh;
 
     max-width: 750px;
@@ -583,16 +581,16 @@ img {
     margin: auto auto auto auto;
 
     background-image: url(../images/illustrasjonForside.svg);
-    background-size: 110vw auto;
-    background-position: left;
+    background-size: clamp(400px, 35vw, 600px) auto;
+    background-position: right;
     background-repeat: no-repeat;
   }
 
   .introduction-box {
-    width: 30vw;
+    width: 35vw;
     max-width: 750px;
-    margin-left: 9vw;
-  }
+    margin-left: 10vw;
+   }
 
   .introduction-box p {
     padding-top: 3vh;
@@ -602,17 +600,18 @@ img {
 
   .project-wrapper {
     max-width: 1600px;
-    width: auto;
+    width: 100vw;
     height: auto;
-    min-height: 50vh;
+    min-height: 40vh;
 
     padding-left: 50vw;
     margin-bottom: 5vh;
 
     background-position: bottom right;
-    background-size: 125vw auto;
+    background-size: 110vw auto;
     background-repeat: no-repeat;
   }
+
 
   .index-prosjekt-tekstboks {
     width: 35vw;
@@ -816,7 +815,8 @@ img {
     margin: 0vw auto auto auto;
 
     background-image: url(../images/illustrasjonForside.svg);
-    background-position: right center;
+    background-size: clamp(400px, 35vw, 600px) auto;
+    background-position: right;
     background-repeat: no-repeat;
   }
 
@@ -839,15 +839,35 @@ img {
 
   .project-wrapper {
     max-width: 1600px;
-    min-height: 80vh;
+    max-height: 1080px;
+    min-height: clamp(600px, 70vh, 1080px);
     width: 100vw;
     height: auto;
 
     padding-left: 50vw;
     margin-bottom: 5vh;
 
-    background-position: right center;
-    background-size: 100vw auto;
+    background-position: right right;
+     /*   background-size: 100vw auto;*/
+background-size: clamp(400px 100vw 1080px) auto; 
+  }
+
+
+  
+  #index-main .project-wrapper:hover {
+    animation: hoverscale 250ms;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
+  
+  @keyframes hoverscale {
+    0% {
+       background-size: 100vw auto;
+    }  
+    100% {  
+    background-size: 100.5vw auto;
+      text-shadow: #394e6153 2px  2px 3px;
+    }
   }
 
   /* Spesifikt for hver side*/
@@ -866,6 +886,7 @@ img {
   .index-prosjekt-tekstboks {
     width: 30vw;
     max-width: 450px;
+
   }
 
   .project-wrapper p {
@@ -940,6 +961,8 @@ img {
     max-width: 750px;
   }
 }
+
+
 
 
 /*  Desktop-curve / prosjektor */
@@ -1050,23 +1073,23 @@ img {
     justify-content: left;
 
     height: 90vh;
-    width: 80vw;
-    max-width: 1600px;
+    width: 100vw;
+    max-width: 1900px;
 
     margin: 0vw auto auto auto;
 
     background-image: url(../images/illustrasjonForside.svg);
-    background-position: right center;
+    background-size: clamp(600px, 50vw, 700px) auto;
+    background-position: left;
     background-repeat: no-repeat;
   }
 
   .introduction-box {
     width: 29vw;
     max-width: 500px;
-    margin-left: 4vw;
+    margin-left: 15vw;
     padding-right: 1vw;
-   
-  }
+     }
 
   .introduction-box p {
     padding-top: 4vh;
@@ -1076,26 +1099,44 @@ img {
 
   .left-h1 {
     text-align: left;
-  }
+   }
 
   .project-wrapper {
-    max-width: 1600px;
-    min-height: 80vh;
-    max-height: 1200px;
-    width: 100vw;
-    height: auto;
+       max-width: 1900px;
+    max-height: 1000px;
+    height: 70vh;
+   width: 100vw;
 
-    padding-left: 42vw;
     margin-bottom: 5vh;
 
-    background-position: right center;
-    background-size: 100vw auto;
+    background-position: right right;
+  background-size: clamp(1600px, 100vw, 1900px) auto;
   }
+
+
+  
+  #index-main .project-wrapper:hover {
+    animation: hoverscale 250ms;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
+  
+  @keyframes hoverscale {
+    0% {
+     
+       background-size: clamp(1600px, 100vw, 1900px) auto;
+    }
+    100% {  
+    background-size: clamp(1600px, 102vw, 1910px) auto;
+      text-shadow: #394e6153 2px  2px 3px;
+    }
+  }
+  
 
   /* p Spesifikt for hver side*/
 
   #trumf {
-    background-image: url(../images/embredesigns-cover.png);
+    background-image: url(../images/trumf-backround.png);
   }
   #embredesigns {
     background-image: url(../images/embredesigns-cover.png);
@@ -1106,10 +1147,12 @@ img {
 
   /* p Index tekst container*/
 
+
   .index-prosjekt-tekstboks {
     width: 30vw;
-    max-width: 500px;
-  }
+    max-width: 550px;
+    margin-left: clamp(200px, 30vw, 1000px);
+     }
 
   .project-wrapper p {
     padding-top: 3vh;
@@ -1118,6 +1161,14 @@ img {
   /* p Prosjektsider */
 
   /* p prosjektside tekst container */
+
+  
+  .back img { 
+    position: absolute;
+    left: 0;
+
+    margin-left: 1.2vh;
+  }
 
   .tekst-paragraf-wrap {
     display: flex;
@@ -1167,8 +1218,7 @@ img {
   /* p bilder*/
 
   .image-container {
-  /*  margin-top: 3vh; */
-    margin-bottom: 3vh;
+     margin-bottom: 3vh;
   }
 
   .image-container img {
