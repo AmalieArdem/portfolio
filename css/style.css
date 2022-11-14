@@ -11,6 +11,7 @@ a {
   color: rgb(55, 54, 58);
 }
 
+
 main {
   white-space: nowrap; 
 
@@ -126,8 +127,9 @@ h3 {
   
   opacity: 0;
 
-  animation: arrow 7s linear 3s;
+  animation: arrow 8s linear 6s;
   animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
 
 @keyframes arrow {
@@ -163,6 +165,21 @@ h3 {
 
 /* Prosjekt sider*/
 
+#reveal {
+  animation: reveal 1s linear 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+@keyframes reveal {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+  }
+}
+
 .project-wrapper {
   display: flex;
   align-items: center;
@@ -185,6 +202,7 @@ footer {
 justify-content: center;
 text-align: center;
   width: 98.9vw;
+
   color: white;
 }
 
@@ -341,7 +359,7 @@ img {
   #kontakt img {
     display: inline;
     width: auto;
-    height: 10vw;
+    height: clamp(10px, 5vh, 35px);
     padding-left: 1vh;
     padding-right: 1vh;
   }
@@ -350,6 +368,7 @@ img {
 
   .heading-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -357,11 +376,15 @@ img {
     width: 100vw;
     max-width: 1600px;
 
-    padding-bottom: 30vh;
-    background-image: url(../images/illustrasjonForside.svg);
+    padding-top: 20vh;
+    background-image: url(../images/illustrasjonForsideB.svg);
     background-size: 90vw auto;
     background-position: center bottom;
     background-repeat: no-repeat;
+  }
+
+  .heading-container img {
+width: 100vw;
   }
 
   .introduction-box {
@@ -554,7 +577,7 @@ img {
   #kontakt img {
     display: inline;
     width: auto;
-    height: 10vw;
+    height: clamp(10px, 5vh, 40px);
     padding-left: 1vh;
     padding-right: 1vh;
   }
@@ -571,25 +594,30 @@ img {
 
   .heading-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+
 
     height: 60vh;
     width: 100vw;
     max-width: 1600px;
 
-    margin: auto auto auto auto;
+    margin-top: 20vh;
 
-    background-image: url(../images/illustrasjonForside.svg);
+    background-image: url(../images/illustrasjonForsideb.svg);
     background-size: clamp(400px, 35vw, 600px) auto;
-    background-position: right;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
+  }
+  .heading-container img {
+    width: 50vw;
   }
 
   .introduction-box {
-    width: 35vw;
+    width: 40vw;
     max-width: 750px;
-    margin-left: 10vw;
+  
    }
 
   .introduction-box p {
@@ -602,7 +630,7 @@ img {
     max-width: 1600px;
     width: 100vw;
     height: auto;
-    min-height: 40vh;
+    min-height: clamp(500px, 40vh, 800px);
 
     padding-left: 50vw;
     margin-bottom: 5vh;
@@ -794,7 +822,7 @@ img {
   #kontakt img {
     display: inline;
     width: auto;
-    height: 5vh;
+    height: clamp(20px, 5vh, 60px);
     padding-left: 1vh;
     padding-right: 1vh;
   }
@@ -812,13 +840,30 @@ img {
     width: 80vw;
     max-width: 1600px;
 
-    margin: 0vw auto auto auto;
-
-    background-image: url(../images/illustrasjonForside.svg);
-    background-size: clamp(400px, 35vw, 600px) auto;
-    background-position: right;
+    background-image: url(../images/illustrasjonForsideB.svg);
+  /*  background-size: clamp(400px, 45vw, 700px) auto; */
+  background-size: 45vw, auto;
+  background-position: 100% 50%;
     background-repeat: no-repeat;
+
   }
+
+  .heading-container img {
+    width: 40vw;
+
+    animation: illustrasjon 5s linear 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+
+@keyframes illustrasjon {
+  0% {
+opacity: 0;    }   
+   
+    100% {
+     opacity: 1;
+  }
+}
 
   .introduction-box {
     width: 29vw;
@@ -839,8 +884,7 @@ img {
 
   .project-wrapper {
     max-width: 1600px;
-    max-height: 1080px;
-    min-height: clamp(600px, 70vh, 1080px);
+    min-height: clamp(800px, 80vh, 1080px);
     width: 100vw;
     height: auto;
 
@@ -848,8 +892,8 @@ img {
     margin-bottom: 5vh;
 
     background-position: right right;
-     /*   background-size: 100vw auto;*/
-background-size: clamp(400px 100vw 1080px) auto; 
+    background-size: 100vw auto;
+  /*  background-size: clamp(400px 100vw 1080px) auto; */
   }
 
 
@@ -870,7 +914,7 @@ background-size: clamp(400px 100vw 1080px) auto;
     }
   }
 
-  /* Spesifikt for hver side*/
+  /* d Spesifikt for hver side*/
   #trumf {
     background-image: url(../images/trumf-backround.png);
   }
@@ -1057,7 +1101,8 @@ background-size: clamp(400px 100vw 1080px) auto;
   #kontakt img {
     display: inline;
     width: auto;
-    height: 5vh;
+   height: 5vh; 
+    height: clamp(20px, 5vh, 60px);
     padding-left: 1vh;
     padding-right: 1vh;
   }
@@ -1070,24 +1115,59 @@ background-size: clamp(400px 100vw 1080px) auto;
   .heading-container {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 
     height: 90vh;
     width: 100vw;
     max-width: 1900px;
 
-    margin: 0vw auto auto auto;
-
-    background-image: url(../images/illustrasjonForside.svg);
-    background-size: clamp(600px, 50vw, 700px) auto;
-    background-position: right;
+    background-image: url(../images/illustrasjonForsideB.svg);
+    background-size: clamp(600px, 60vw, 800px) auto;
+    background-position: 90% 50%;
     background-repeat: no-repeat;
   }
+
+  
+  .heading-container img {
+    width: clamp(600px, 50vw, 700px);
+
+    animation: illustrasjon 5s linear 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+
+@keyframes illustrasjon {
+  0% {
+opacity: 0;    }   
+   
+    100% {
+     opacity: 1;
+  }
+}
 
   .introduction-box {
     width: 29vw;
     max-width: 500px;
-    margin-left: 35vw;
+    margin-left: 8vw;
+    padding-right: 1vw;
+     }
+
+  #trumf .introduction-box {
+    width: 29vw;
+    max-width: 500px;
+    margin-left: clamp(20px, 35vw, 1000px);
+    padding-right: 1vw;
+     }
+  #fakenews .introduction-box {
+    width: 29vw;
+    max-width: 500px;
+    margin-left: clamp(20px, 35vw, 1000px);
+    padding-right: 1vw;
+     }
+  #embredesigns .introduction-box {
+    width: 29vw;
+    max-width: 500px;
+    margin-left: clamp(20px, 35vw, 1000px);
     padding-right: 1vw;
      }
 
